@@ -21,7 +21,7 @@
 
         <br>
 
-        <img src="img/photo.jpg" width="800">
+        <img src="img/japan_1.jpg" width="800">
 
         <br>
         <br>
