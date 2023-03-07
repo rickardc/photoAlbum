@@ -34,6 +34,10 @@
                 <input type="text" name="desc" id="desc" />
             </p>
 
+            <p class="row">	<label for="date">Date: </label>
+                <input type="date" name="date" id="date" />
+            </p>
+
             <p class="row">	<label for="keywords">Keywords: (seperated by a semicolon, e.g. keyword1; keyword2; etc.):</label>
                 <input type="text" name="keywords" id="keywords" />
             </p>
@@ -45,6 +49,7 @@
         
         <br>
         <a href="photoalbum.php">Photo Album</a>
+        <a href="photolookup.php">Photo Lookup</a>
 
         <?php
 
