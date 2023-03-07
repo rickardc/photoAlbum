@@ -20,13 +20,38 @@
         <h3>Name: Christopher Rickard</h3>
 
         <br>
-
-        <img src="img/japan_1.jpg" width="800">
-
         <br>
-        <br>
+        
+        <?php
 
-        <a href="upload.php">Photo Uploader</a>
+        $index = 0;
+
+        if (isset($_POST['Previous'])) {
+            $index += 1;
+        }
+
+        if (isset($_POST['Next'])) {
+            $index -= 1;
+        }
+
+        // display all photos in the img folder
+        $dir = "img/";
+        $files = array_diff(scandir($dir), array('.', '..'));
+
+        echo "<img src='img/" . $files[$index] . "' alt='photo' width='800'>";
+
+        ?>
+
+        <form method="post">
+        <input type="submit" name="Previous"
+                value="Previous"/>
+         
+        <input type="submit" name="Next"
+                value="Next"/>
+    </form>
+
+        <a href="photouploader.php">Photo Uploader</a>
+        <a href="photolookup.php">Photo Lookup</a>
 
     </body>
 
