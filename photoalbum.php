@@ -35,11 +35,12 @@
         }
 
         // display all photos in the img folder
-        $dir = "img/";
+        $dir = "/img/";
         $files = array_diff(scandir($dir), array('.', '..'));
 
-        echo "<img src='img/" . $files[$index] . "' alt='photo' width='800'>";
-
+        echo "<img src='/img/" . $files[$index] . "' alt='photo' width='800'>";
+        print_r(scandir($dir));
+        print_r($files);
         ?>
 
         <form method="post">
