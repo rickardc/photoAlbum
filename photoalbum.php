@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-    <?php
+<?php
     session_start();
     if (!isset($_SESSION['index'])) {
         $_SESSION['index'] = 3;
@@ -10,22 +6,24 @@
 
     ?>
 
+<!DOCTYPE html>
+
+<html lang="en">
+
     <head>
         <meta charset="utf-8" />
         <meta name="description" content="Photo Album - Upload Photo" />
         <meta name="keywords" content="photo, album, uploader" />
         <meta name="author" content="Chris Rickard" />
         <title>Photo Album - Upload Photo</title>
-        <link href="styles/style.css" rel="stylesheet">
-
-
+        <link rel="stylesheet" href="styles/style.css">
     </head>
 
     <body>
-
-        <h1>Photo Album</h1>
-        <h3>Student ID: 6512178</h3>
-        <h3>Name: Christopher Rickard</h3>
+        
+        <?php
+            require('menu.php')
+        ?>
 
         <?php
 
@@ -46,8 +44,7 @@
             $dir = "img/";
             $files = array_diff(scandir($dir), array('a' => '.', '..', '.DS_Store'));
 
-            echo "<p> files index: " . $_SESSION['index'] . "</p>";
-            echo "<img src='img/" . $files[$_SESSION['index']] . "' alt='photo' height='650'>";
+            echo "<img src='img/" . $files[$_SESSION['index']] . "' alt='photo' height='600'>";
             ?>
 
         <br>
@@ -61,13 +58,6 @@
                 value="Next"/>
     </form>
 
-    <br>
-    <br>
-    <a href="photouploader.php">Photo Uploader</a>
-    <a href="photolookup.php">Photo Lookup</a>
-
     </body>
-
-    
 
 </html>

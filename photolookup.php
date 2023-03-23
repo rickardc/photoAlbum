@@ -14,9 +14,10 @@
     </head>
 
     <body>
-        <h1>Photo Lookup</h1>
-        <h3>Student ID: 6512178</h3>
-        <h3>Name: Christopher Rickard</h3>
+        
+        <?php
+        require('menu.php')
+        ?>
         
 
         <form method="post" >
