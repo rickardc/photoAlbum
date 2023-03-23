@@ -1,6 +1,3 @@
-<h3>Name: Christopher Rickard</h3>
-<h3>Student ID: 6512178</h3>
-
 <?php
   $currentPage = basename($_SERVER['PHP_SELF']);
 
