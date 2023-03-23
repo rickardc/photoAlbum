@@ -10,6 +10,10 @@ sudo yum install -y httpd mysql php git
 
 cd /var/www/html
 
+mkdir cos80001
+
+cd cos80001
+
 # Download git files
 
 sudo git clone https://github.com/rickardc/photoAlbum.git .

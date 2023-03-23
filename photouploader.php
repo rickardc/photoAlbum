@@ -44,21 +44,6 @@
 
         </fieldset>
         </form>
-        
-        <br>
-        <a href="photoalbum.php">Photo Album</a>
-        <a href="photolookup.php">Photo Lookup</a>
-
-        <?php
-
-            function sanitise_input($data){ //stat sanitise function
-                $data = trim($data);
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
-            }
-            
-            ?>
             
     </body>
 

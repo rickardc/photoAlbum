@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        
+
         <?php
         require('menu.php')
         ?>
@@ -43,9 +43,6 @@
         </fieldset>
         </form>
 
-        <br>
-        <a href="photoalbum.php">Photo Album</a>
-        <a href="photolookup.php">Photo Lookup</a>
-
-
     </body>
+
+</html>
