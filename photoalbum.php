@@ -20,6 +20,7 @@
     </head>
 
     <body>
+        <p> New text </p>
         
         <?php
             require('menu.php')
