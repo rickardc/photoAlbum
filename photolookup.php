@@ -18,6 +18,8 @@
         <?php
         require('menu.php')
         ?>
+
+        <p> add some text here </p>
         
 
         <form method="post" >
