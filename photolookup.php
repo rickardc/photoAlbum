@@ -19,7 +19,7 @@
         require('menu.php')
         ?>
 
-        <p> add some text here ok now main branch has something new </p>
+        <p> That text was dumb </p>
         
 
         <form method="post" >
