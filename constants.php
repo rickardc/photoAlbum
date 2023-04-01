@@ -44,7 +44,7 @@ define('BUCKET_NAME', 'photo-album-vpc-046d007cc4a8d62ee');
 // [ACTION REQUIRED] region of the above bucket
 define('REGION', 'us-east-1');
 // no need to update this const
-define('S3_BASE_URL','https://'.BUCKET_NAME.'.s3.amazonaws.com/');
+define('S3_BASE_URL','https://'.BUCKET_NAME.'.s3.amazonaws.com/img/');
 
 // [ACTION REQUIRED] name of the database that stores photo meta-data (note that this is not the DB identifier of the RDS instance)
 define('DB_NAME', 'photoalbum');
