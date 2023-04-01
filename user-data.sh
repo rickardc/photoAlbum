@@ -34,6 +34,6 @@ sudo git clone -b assignment_1b https://github.com/rickardc/photoAlbum.git .
 
 # Turn on web server
 
-chkconfig httpd on
+sudo chkconfig httpd on
 
-service httpd start
+sudo service httpd start

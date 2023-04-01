@@ -59,13 +59,13 @@ define('DB_PWD', 'admin-password');
 define('DB_PHOTO_TABLE_NAME', 'photo_metadata');
 // The table above has 5 columns:
 // [ACTION REQUIRED] name of the column in the above table that stores photo's titles
-define('DB_PHOTO_TITLE_COL_NAME', 'title');
+define('DB_PHOTO_TITLE_COL_NAME', 'photo_title');
 // [ACTION REQUIRED] name of the column in the above table that stores photo's descriptions
 define('DB_PHOTO_DESCRIPTION_COL_NAME', 'description');
 // [ACTION REQUIRED] name of the column in the above table that stores photo's creation dates
-define('DB_PHOTO_CREATIONDATE_COL_NAME', 'creationdate');
+define('DB_PHOTO_CREATIONDATE_COL_NAME', 'creation_date');
 // [ACTION REQUIRED] name of the column in the above table that stores photo's keywords
 define('DB_PHOTO_KEYWORDS_COL_NAME', 'keywords');
 // [ACTION REQUIRED] name of the column in the above table that stores photo's links in S3 
-define('DB_PHOTO_S3REFERENCE_COL_NAME', 'reference');
+define('DB_PHOTO_S3REFERENCE_COL_NAME', 's3_reference');
 ?>
