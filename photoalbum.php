@@ -12,7 +12,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <meta name="description" content="Photo Album - Upload Photo" />
+        <meta name="description" content="Photo Album" />
         <meta name="keywords" content="photo, album, uploader" />
         <meta name="author" content="Chris Rickard" />
         <title>Photo Album - Upload Photo</title>
@@ -20,13 +20,12 @@
     </head>
 
     <body>
-        <p> New text </p>
         
         <?php
-            require('menu.php')
-        ?>
-
-        <?php
+            ini_set('display_errors', 1);
+            require 'mydb.php';
+            require_once 'constants.php';
+            require('menu.php');
 
 
             if (isset($_POST['Previous']) and $_SESSION['index'] > 3) {
@@ -40,12 +39,23 @@
             } elseif(isset($_POST['Next']) and $_SESSION['index'] == 11){
                 $_SESSION['index'] = 3;
             }
+            // get photos from database
+            $my_db = new MyDB();
+		    $photos = $my_db->getAllPhotos();
+
+            // add photos to an array
+            $photo_array = array();
+            foreach ($photos as $photo) {
+                array_push($photo_array, $photo->getS3Reference());
+            }
+
+
 
             // display all photos in the img folder
-            $dir = "img/";
-            $files = array_diff(scandir($dir), array('a' => '.', '..', '.DS_Store'));
+            //$dir = "img/";
+            //$files = array_diff(scandir($dir), array('a' => '.', '..', '.DS_Store'));
 
-            echo "<img src='img/" . $files[$_SESSION['index']] . "' alt='photo' height='600'>";
+            echo "<img src='" . $photo_array[$_SESSION['index']] . "' alt='photo' height='600'>";
             ?>
 
         <br>
