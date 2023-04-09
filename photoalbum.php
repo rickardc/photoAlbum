@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['index'])) {
-        $_SESSION['index'] = 3;
+        $_SESSION['index'] = 0;
     }
 
     ?>
@@ -28,15 +28,15 @@
             require('menu.php');
 
 
-            if (isset($_POST['Previous']) and $_SESSION['index'] > 3) {
+            if (isset($_POST['Previous']) and $_SESSION['index'] > 0) {
                 $_SESSION['index']--;
-            } elseif(isset($_POST['Previous']) and $_SESSION['index'] == 3){
+            } elseif(isset($_POST['Previous']) and $_SESSION['index'] == 0){
                 $_SESSION['index'] = 11;
             }
 
-            if (isset($_POST['Next']) and $_SESSION['index'] < 11) {
+            if (isset($_POST['Next']) and $_SESSION['index'] < 3) {
                 $_SESSION['index']++;
-            } elseif(isset($_POST['Next']) and $_SESSION['index'] == 11){
+            } elseif(isset($_POST['Next']) and $_SESSION['index'] == 3){
                 $_SESSION['index'] = 3;
             }
             // get photos from database
