@@ -31,13 +31,13 @@
             if (isset($_POST['Previous']) and $_SESSION['index'] > 0) {
                 $_SESSION['index']--;
             } elseif(isset($_POST['Previous']) and $_SESSION['index'] == 0){
-                $_SESSION['index'] = 11;
+                $_SESSION['index'] = 3;
             }
 
             if (isset($_POST['Next']) and $_SESSION['index'] < 3) {
                 $_SESSION['index']++;
             } elseif(isset($_POST['Next']) and $_SESSION['index'] == 3){
-                $_SESSION['index'] = 3;
+                $_SESSION['index'] = 0;
             }
             // get photos from database
             $my_db = new MyDB();
