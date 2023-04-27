@@ -13,8 +13,23 @@
     </head>
 
     <body>
-        <?php
-            require('menu.php');
-            ?>
+
+        <h3>Photo Uploader</h3>
+        <a href="photouploader.php">upload.php</a>
+
+        <p> some new code on main</p>
+
+        <br>
+        <br>
+
+        <h3>Photo Album</h3>
+        <a href="photoalbum.php">photoalbum.php</a>
+
+        <br>
+        <br>
+        
+        <h3>Photo Lookup</h3>
+        <a href="photolookup.php">photolookup.php</a>
+
 
         </body>
