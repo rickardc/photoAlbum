@@ -49,7 +49,7 @@ define('S3_BASE_URL','https://objectstorage.us-ashburn-1.oraclecloud.com/p/Gnehn
 // [ACTION REQUIRED] name of the database that stores photo meta-data (note that this is not the DB identifier of the database instance)
 define('DB_NAME', 'photos');
 // [ACTION REQUIRED] endpoint/private IP of the MySQL database
-define('DB_ENDPOINT', '172.17.3.233');
+define('DB_ENDPOINT', '172.18.3.200');
 // [ACTION REQUIRED] administrator username of your database  
 define('DB_USERNAME', 'admin');
 // [ACTION REQUIRED] administrator password of your database 
