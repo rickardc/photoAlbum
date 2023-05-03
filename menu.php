@@ -4,7 +4,9 @@
   $pages = [
     "photoalbum.php" => "Photo Album",
     "photouploader.php" => "Photo Uploader",
-    "photolookup.php" => "Photo Lookup"
+    "photolookup.php" => "Photo Lookup",
+    "album.php" => "album.php"
+    
 ];
 ?>
 
