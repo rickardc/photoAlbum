@@ -18,7 +18,7 @@
 *	   				│   album.php 					(executable) display all images in DB
 *	   				│   const.php 					Constants defined here
 *	   				│   defaultstyle.css			CSS style for the website
-*	   				│   mydb.php					Interact with RDS DB
+*	   				│   mydb.php					Interact with DB
 *	   				│   photo.php					Photo object class
 *	   				│
 *	
@@ -39,24 +39,24 @@ define('STUDENT_ID', '6512178');
 // [ACTION REQUIRED] your tutorial session
 define('TUTORIAL_SESSION', 'Thursday 06:30PM');
 
-// [ACTION REQUIRED] name of the S3 bucket that stores images
-define('BUCKET_NAME', 'photo-album-vpc-046d007cc4a8d62ee');
+// [ACTION REQUIRED] name of the object storage bucket that stores images
+define('BUCKET_NAME', 'bucket-20230503-1644-public');
 // [ACTION REQUIRED] region of the above bucket
-define('REGION', 'us-east-1');
+define('REGION', 'us-ashburn-1');
 // no need to update this const
-define('S3_BASE_URL','https://'.BUCKET_NAME.'.s3.amazonaws.com/img/');
+define('S3_BASE_URL','https://objectstorage.us-ashburn-1.oraclecloud.com/p/Gnehn/b/bucket-20230503-1644-public/o/');
 
-// [ACTION REQUIRED] name of the database that stores photo meta-data (note that this is not the DB identifier of the RDS instance)
-define('DB_NAME', 'photoalbum');
-// [ACTION REQUIRED] endpoint of RDS instance
-define('DB_ENDPOINT', 'photoalbum-db.cqt2bki4ztt6.us-east-1.rds.amazonaws.com');
-// [ACTION REQUIRED] username of your RDS instance 
+// [ACTION REQUIRED] name of the database that stores photo meta-data (note that this is not the DB identifier of the database instance)
+define('DB_NAME', 'photos');
+// [ACTION REQUIRED] endpoint/private IP of the MySQL database
+define('DB_ENDPOINT', '172.17.3.233');
+// [ACTION REQUIRED] administrator username of your database  
 define('DB_USERNAME', 'admin');
-// [ACTION REQUIRED] password of your RDS instance
-define('DB_PWD', 'admin-password');
+// [ACTION REQUIRED] administrator password of your database 
+define('DB_PWD', 'Oraclecloud@2023');
 
 // [ACTION REQUIRED] name of the DB table that stores photo's meta-data
-define('DB_PHOTO_TABLE_NAME', 'photo_metadata');
+define('DB_PHOTO_TABLE_NAME', 'photosDB');
 // The table above has 5 columns:
 // [ACTION REQUIRED] name of the column in the above table that stores photo's titles
 define('DB_PHOTO_TITLE_COL_NAME', 'photo_title');
@@ -67,5 +67,5 @@ define('DB_PHOTO_CREATIONDATE_COL_NAME', 'creation_date');
 // [ACTION REQUIRED] name of the column in the above table that stores photo's keywords
 define('DB_PHOTO_KEYWORDS_COL_NAME', 'keywords');
 // [ACTION REQUIRED] name of the column in the above table that stores photo's links in S3 
-define('DB_PHOTO_S3REFERENCE_COL_NAME', 's3_reference');
+define('DB_PHOTO_S3REFERENCE_COL_NAME', 'object_reference');
 ?>
